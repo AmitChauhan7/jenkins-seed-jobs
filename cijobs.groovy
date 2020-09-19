@@ -14,14 +14,14 @@ folder(PROJECT_NAME + '/' + CIJOBS ) {
 
 
 
-pipelineJob(PROJECT_NAME + '/' +CIJOBS+ "/cijobs") {
-    description('cijobs')
+pipelineJob(PROJECT_NAME + '/' +CIJOBS+ "/cart") {
+    description('cart')
     definition {
         cpsScm {
             scm {
                 git {
                     remote {
-                        url(GIT_PREFIX+"/jenkins-seed-jobs.git")
+                        url(GIT_PREFIX+"/rs-cart")
                                            }
                     branch("*/master")
                 }
