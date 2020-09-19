@@ -19,6 +19,10 @@ pipeline {
                 password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'Enter a password')
             }
 
+        tool {
+            terraform 'terraform-0.13.3'
+        }
+
     stages {
 
         stage ('My First Stage') {
