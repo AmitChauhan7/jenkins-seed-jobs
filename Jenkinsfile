@@ -40,6 +40,21 @@ pipeline {
                 print "URL2 = " + URL2
             }
         }
+
+        stage('Conditional Stage') {
+            when {
+                expression {
+                    return TOGGLE
+                }
+            }
+
+
+            steps {
+                print 'Conditional Stage'
+            }
+        }
+
+
         stage ('My Second Stage') {
             steps {
              print 'Second Stage'
