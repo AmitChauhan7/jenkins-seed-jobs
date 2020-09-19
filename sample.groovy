@@ -1,6 +1,8 @@
-folder('roboshop') {
-    displayName('roboshop')
-    description('Roboshop Project folder')
+def PROJECT_NAME = 'roboshop'
+
+folder(PROJECT_NAME) {
+    displayName(PROJECT_NAME)
+    description(PROJECT_NAME + 'Project folder')
 }
 
 folder('roboshop/CIJOBS') {
