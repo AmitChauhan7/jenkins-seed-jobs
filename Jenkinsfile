@@ -19,7 +19,7 @@ pipeline {
                 password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'Enter a password')
             }
 
-        tool {
+        tools {
             terraform 'terraform-0.13.3'
         }
 
