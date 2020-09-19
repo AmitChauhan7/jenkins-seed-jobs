@@ -13,7 +13,7 @@ folder(PROJECT_NAME + '/' + CIJOBS ) {
 
 
 
-pipelineJob(PROJECT_NAME + '/'CIJOBS+ "/sample") {
+pipelineJob(PROJECT_NAME + '/' +CIJOBS+ "/sample") {
     description('roboshop')
     definition {
         cpsScm {
