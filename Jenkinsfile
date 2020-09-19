@@ -43,7 +43,7 @@ pipeline {
 
         }
 
-        stage ('Terraform Version) {
+        stage ('Terraform Version') {
             steps {
             sh 'terraform version'
             }
