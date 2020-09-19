@@ -1,18 +1,19 @@
 def PROJECT_NAME = 'roboshop'
+def CIJOBS = 'CIJOBS'
 
 folder(PROJECT_NAME) {
     displayName(PROJECT_NAME)
     description(PROJECT_NAME + 'Project folder')
 }
 
-folder('roboshop/CIJOBS') {
-    displayName('CIJOBS')
-    description('Roboshop Project CI JobS folder')
+folder(PROJECT_NAME + '/' + CIJOBS ) {
+    displayName(CIJOBS)
+    description(PROJECT_NAME + 'Project' + CIJOBS + 'folder')
 }
 
 
 
-pipelineJob("roboshop/CIJOBS/sample") {
+pipelineJob(PROJECT_NAME + '/'CIJOBS+ "/sample") {
     description('roboshop')
     definition {
         cpsScm {
