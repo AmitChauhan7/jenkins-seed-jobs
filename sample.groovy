@@ -14,8 +14,8 @@ folder(PROJECT_NAME + '/' + CIJOBS ) {
 
 
 
-pipelineJob(PROJECT_NAME + '/' +CIJOBS+ "/sample") {
-    description('sample')
+pipelineJob(PROJECT_NAME + '/' +CIJOBS+ "/cijobs") {
+    description('cijobs')
     definition {
         cpsScm {
             scm {
