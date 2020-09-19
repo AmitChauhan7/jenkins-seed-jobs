@@ -30,3 +30,39 @@ pipelineJob(PROJECT_NAME + '/' +CIJOBS+ "/cart") {
         }
     }
 }
+
+
+pipelineJob(PROJECT_NAME + '/' +CIJOBS+ "/catalogue") {
+    description('catalogue')
+    definition {
+        cpsScm {
+            scm {
+                git {
+                    remote {
+                        url(GIT_PREFIX+"/rs-catalogue")
+                    }
+                    branch("*/master")
+                }
+            }
+            scriptPath("Jenkinsfile")
+        }
+    }
+}
+
+
+pipelineJob(PROJECT_NAME + '/' +CIJOBS+ "/users") {
+    description('users')
+    definition {
+        cpsScm {
+            scm {
+                git {
+                    remote {
+                        url(GIT_PREFIX+"/rs-users")
+                    }
+                    branch("*/master")
+                }
+            }
+            scriptPath("Jenkinsfile")
+        }
+    }
+}
