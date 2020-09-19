@@ -66,3 +66,21 @@ pipelineJob(PROJECT_NAME + '/' +CIJOBS+ "/user") {
         }
     }
 }
+
+
+pipelineJob(PROJECT_NAME + '/' +CIJOBS+ "/shipping") {
+    description('shipping')
+    definition {
+        cpsScm {
+            scm {
+                git {
+                    remote {
+                        url(GIT_PREFIX+"/rs-shipping")
+                    }
+                    branch("*/master")
+                }
+            }
+            scriptPath("Jenkinsfile")
+        }
+    }
+}
