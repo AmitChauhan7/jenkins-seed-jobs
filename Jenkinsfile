@@ -35,7 +35,9 @@ pipeline {
             }
         }
         stage ('My Second Stage') {
-            print 'Second Stage'
+            steps {
+             print 'Second Stage'
+            }
 
         }
     }
