@@ -84,3 +84,38 @@ pipelineJob(PROJECT_NAME + '/' +CIJOBS+ "/shipping") {
         }
     }
 }
+
+
+pipelineJob(PROJECT_NAME + '/' +CIJOBS+ "/ratings") {
+    description('ratings')
+    definition {
+        cpsScm {
+            scm {
+                git {
+                    remote {
+                        url(GIT_PREFIX+"/rs-ratings")
+                    }
+                    branch("*/master")
+                }
+            }
+            scriptPath("Jenkinsfile")
+        }
+    }
+}
+
+pipelineJob(PROJECT_NAME + '/' +CIJOBS+ "/dispatch") {
+    description('dispatch')
+    definition {
+        cpsScm {
+            scm {
+                git {
+                    remote {
+                        url(GIT_PREFIX+"/rs-dispatch")
+                    }
+                    branch("*/master")
+                }
+            }
+            scriptPath("Jenkinsfile")
+        }
+    }
+}
