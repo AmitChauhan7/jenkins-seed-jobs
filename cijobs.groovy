@@ -50,14 +50,14 @@ pipelineJob(PROJECT_NAME + '/' +CIJOBS+ "/catalogue") {
 }
 
 
-pipelineJob(PROJECT_NAME + '/' +CIJOBS+ "/users") {
-    description('users')
+pipelineJob(PROJECT_NAME + '/' +CIJOBS+ "/user") {
+    description('user')
     definition {
         cpsScm {
             scm {
                 git {
                     remote {
-                        url(GIT_PREFIX+"/rs-users")
+                        url(GIT_PREFIX+"/rs-user")
                     }
                     branch("*/master")
                 }
