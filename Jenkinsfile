@@ -121,6 +121,10 @@ pipeline {
 */
 
 @Library('roboshop') _
+sample.info 'Starting'
+sample.warning 'Nothing to do!'
+
+/*
 pipeline {
     agent any
 
@@ -134,3 +138,4 @@ pipeline {
         }
         }
     }
+    */
