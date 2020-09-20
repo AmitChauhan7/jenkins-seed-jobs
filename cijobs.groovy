@@ -103,6 +103,23 @@ pipelineJob(PROJECT_NAME + '/' +CIJOBS+ "/ratings") {
     }
 }
 
+pipelineJob(PROJECT_NAME + '/' +CIJOBS+ "/payment") {
+    description('payment')
+    definition {
+        cpsScm {
+            scm {
+                git {
+                    remote {
+                        url(GIT_PREFIX+"/rs-payment")
+                    }
+                    branch("*/master")
+                }
+            }
+            scriptPath("Jenkinsfile")
+        }
+    }
+}
+
 pipelineJob(PROJECT_NAME + '/' +CIJOBS+ "/dispatch") {
     description('dispatch')
     definition {
