@@ -121,5 +121,16 @@ pipeline {
 */
 
 @Library('roboshop') _
+pipeline {
+    agent any
 
-sample()
+    stages {
+        stage('Sample') {
+         steps {
+            script {
+                sample()
+            }
+         }
+        }
+        }
+    }
