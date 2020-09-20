@@ -74,6 +74,7 @@
 }
 */
 
+/*
 pipeline {
     agent none
     stages {
@@ -117,3 +118,8 @@ pipeline {
         }
     }
 }
+*/
+
+@Library('roboshop') _
+
+sample()
